@@ -1,0 +1,25 @@
+Stream API
+    1.集合处理数据的弊端
+        当我们在需要对集合中的元素进行操作时，除了必须的添加，删除，获取外，最典型的操作就是集合遍历
+        针对不同需求多次循环遍历，希望有更高效的处理方式
+
+    Stream更加优雅的解决需求
+
+    2.Stream流的获取方式
+        1.根据Collection获取
+            首先，java.util.Collection 接口中加入了一个default方法 stream(),也就是说Collection接口下的所有实现都可以通过stream流来
+            获取
+            Map接口并没有实现Collection接口，此时如何处理？
+                可以根据Map获取对应的key value 的集合
+
+        2.根据Stream的of方法
+            针对于数组
+
+    3.Stream常用方法介绍
+        1.终结方法(返回值类型不是Stream类型的方法，不再支持链式调用) eg: Count forEach
+        2.非终结方法(返回值类型仍然是Stream类型的方法，支持链式调用。)
+
+    4.Stream注意事项
+        1.Stream只能操作一次
+        2.Stream方法返回的是新的流
+        3.Stream不调用终结方法，中间的操作不会执行
