@@ -1,8 +1,5 @@
 package com.jf.stream;
 
-import com.jf.domain.Person;
-
-import java.util.Optional;
 import java.util.stream.Stream;
 
 /**

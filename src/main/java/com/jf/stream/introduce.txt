@@ -46,3 +46,17 @@ Stream API
     StreamTest16.java       mapToInt
     StreamTest17.java       reduce
     StreamTest18.java       concat
+
+    5.Stream结果收集
+        1.结果收集到集合中     com.jf.stream.test01 --> test1
+        2.结果收集到数组中     com.jf.stream.test01 --> test2
+
+    6.
+      对Stream流中的数据做聚合运算   com.jf.stream.test01
+      Stream流分组计算             com.jf.stream.test01
+      Stream流分组(多级分组)        com.jf.stream.test01
+      对Stream流中的数据做分区操作    com.jf.stream.test01
+      对Stream流中的数据进行拼接      com.jf.stream.test01
+
+      并行流 并行流操作               com.jf.stream.test02
+      并行流中的数据安全问题 解决方案     com.jf.stream.test03
