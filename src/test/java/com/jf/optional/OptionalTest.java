@@ -1,7 +1,9 @@
 package com.jf.optional;
 
+import com.jf.domain.Person;
 import org.junit.Test;
 
+import java.util.Locale;
 import java.util.Optional;
 
 public class OptionalTest {
@@ -58,8 +60,47 @@ public class OptionalTest {
         String s = op2.orElseThrow(() -> new Exception());
         System.out.println(s3); // 666
 
+    }
 
 
+    @Test
+    public void test3() {
+        Optional<String> op1 = Optional.of("Alice");
+        Optional<String> op2 = Optional.empty();
+        // 如果存在值  就做什么
+        op1.ifPresent(s -> System.out.println("有值： " + s));
+    }
 
+    /**
+     * 针对于对象,自定义一个方法，将Person对象中的name 转换为大写 并返回
+     */
+    @Test
+    public void test4() {
+        Person alice = new Person(null, 11);
+        Optional<Person> alice1 = Optional.of(alice);
+        String name = getNameForOptional(alice1);
+        System.out.println(name);
+    }
+
+    public String getNameForOptional(Optional<Person> optional) {
+        if (optional.isPresent()) {
+            return optional.map(Person::getName)
+                    .map(String::toUpperCase)
+                    .orElse("空值");
+        }
+        return null;
+    }
+
+    public String getName(Person person) {
+
+        if (person != null) {
+            String name = person.getName();
+            if (name != null) {
+                return name.toUpperCase();
+            } else {
+                return null;
+            }
+        }
+        return null;
     }
 }
