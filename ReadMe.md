@@ -108,7 +108,7 @@
 * Period:用于计算2个日期(LocalDate，年月日)的距离
 * ZoneDateTime：包含时区的时间
 
-|标题|标题|
+|类|位置|
 |:---:|:---:|
 |LocalDateTime|test.java.com.jf.test02|
 |日期时间的修改与比较|test.java.com.jf.test03|
@@ -133,3 +133,14 @@
 &emsp; JDK8为@Target元注解新增了两种类型:TYPE_PARAMETER,TYPE_USE.
 * TYPE_PARAMETER:表示该注解能写在类型参数的声明中。类型参数声明:<T>
 * TYPE_USE: 表示注解可以再任何用到类型的地方使用
+
+
+### JDK1.8 String类
+|类方法|位置|
+|:---:|:---:|
+|String类特点|java.com.jf.stringessence.test01|
+|String类构造方法|java.com.jf.stringessence.test02|
+|String类equals和compareTo|com.jf.stringessence.Test03EqualsAndCompareTo|
+|String类SubString和Concat|com.jf.stringessence.Test04SubStringAndConcat|
+|String类Replace|com.jf.stringessence.Test05Replace|
+|String类MemoryAnalysis|com.jf.stringessence.Test06CompileStringMemoryAnalysis|
